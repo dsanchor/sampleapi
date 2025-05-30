@@ -1,4 +1,21 @@
 
+# API Endpoints Documentation
+
+## OpenAPI/Swagger Documentation
+
+The API provides comprehensive OpenAPI documentation that can be accessed in these ways:
+
+- **Swagger UI:** Access interactive API documentation at `http://localhost:8080/swagger-ui.html`
+- **OpenAPI JSON:** Raw OpenAPI specification in JSON format at `http://localhost:8080/api-docs`
+- **OpenAPI YAML:** Raw OpenAPI specification in YAML format at `http://localhost:8080/api-docs.yaml`
+
+The OpenAPI documentation includes:
+- Detailed endpoint descriptions
+- Request and response schemas
+- Example payloads
+- Response codes and their meanings
+- Parameter descriptions
+
 ## Endpoints
 
 ### 1. Create a New TODO Item

@@ -11,12 +11,15 @@ This API allows you to manage a TODO list. Each TODO item has the following attr
 **Base URL:**  
 `http://localhost:8080`
 
-**OpenAPI Specification:**
-`http://localhost:8080/v3/api-docs.yaml`
+**OpenAPI Documentation:**  
+- Swagger UI: `http://localhost:8080/swagger-ui.html`  
+- JSON Specification: `http://localhost:8080/api-docs`  
+- YAML Specification: `http://localhost:8080/api-docs.yaml`
 
 ---
 
-Detailed information about the API endpoints can be found in [this document](./ENDPOINTS.md).
+- Detailed information about the API endpoints can be found in [this document](./ENDPOINTS.md).
+- For comprehensive guide on the OpenAPI implementation, see our [OpenAPI Guide](./OPENAPI-GUIDE.md).
 
 # Containerize the Application
 

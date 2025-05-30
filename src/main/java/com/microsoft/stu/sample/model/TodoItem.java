@@ -1,19 +1,31 @@
 package com.microsoft.stu.sample.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Schema(description = "Todo Item Model - Represents a task to be completed")
 public class TodoItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "Unique identifier of the todo item", example = "1", accessMode = Schema.AccessMode.READ_ONLY)
     private Long id;
 
+    @Schema(description = "Name or title of the todo item", example = "Complete Spring Boot API", required = true)
     private String name;
+
+    @Schema(description = "Detailed description of the todo item", example = "Implement all required endpoints and add proper documentation")
     private String details;
+
+    @Schema(description = "Date and time when the todo item was created", example = "2023-01-20T10:30:00", accessMode = Schema.AccessMode.READ_ONLY)
     private LocalDateTime creationDate;
+
+    @Schema(description = "Date and time when the todo item was completed", example = "2023-01-25T15:45:00", accessMode = Schema.AccessMode.READ_ONLY)
     private LocalDateTime closeDate;
+
+    @Schema(description = "Status flag indicating if the todo item is completed", example = "false", defaultValue = "false")
     private boolean done;
 
     public TodoItem() {
