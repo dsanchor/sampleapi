@@ -45,6 +45,13 @@ docker tag sample-api docker.io/$USERNAME/sample-api
 docker push docker.io/$USERNAME/sample-api
 ```
 
+## Continuous Integration with GitHub Actions
+
+This project includes a GitHub Actions workflow for building the image in the main branch and pushing it to github container registry. The workflow is defined in `.github/workflows/build-and-push.yml`.
+
+The image is then available at:
+`ghcr.io/dsanchor/sample-api:latest`
+
 # Deploy in Azure Container Apps
 
 ## Create a Resource Group
@@ -59,6 +66,8 @@ az group create --name $RG --location $LOCATION
 
 ```bash
 IMAGE=docker.io/$USERNAME/sample-api
+# or use the GitHub Container Registry image
+IMAGE=ghcr.io/dsanchor/sample-api:latest
 az containerapp up \
   --name sample-api \
   --resource-group $RG \
